@@ -1,0 +1,400 @@
+/*
+Theme Name: EAB Theme
+Theme URI: https://elarmariodelbebe.com
+Author: OpenAI Assistant
+Author URI: https://example.com
+Description: Tema suave y minimalista para la tienda de ropa de bebés El Armario del Bebé, listo para Elementor y WooCommerce con un estilo inspirado en tonos madera, lino y verde botánico.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: eab-theme
+Tags: two-columns, custom-logo, custom-menu, featured-images, blog, e-commerce, elementor
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+
+:root {
+  --sand: #f1e4d4;
+  --linen: #fff9f1;
+  --tan: #d6b28a;
+  --terracotta: #c38b5f;
+  --forest: #7b9f7b;
+  --ink: #403229;
+  --shadow: rgba(34, 31, 26, 0.08);
+  --rounded: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 20%, rgba(214, 178, 138, 0.08) 0, transparent 30%),
+    radial-gradient(circle at 80% 0, rgba(123, 159, 123, 0.08) 0, transparent 24%),
+    var(--linen);
+}
+
+a {
+  color: var(--terracotta);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #a96f45;
+}
+
+.container {
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 20px 0 64px;
+}
+
+header.site-header {
+  background: linear-gradient(120deg, rgba(214, 178, 138, 0.95), rgba(123, 159, 123, 0.9));
+  color: #fff;
+  padding: 22px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(64, 50, 41, 0.12);
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+.site-title a {
+  color: #fff;
+}
+
+.site-description {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.primary-navigation {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+
+.primary-navigation a {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.primary-navigation a:hover,
+.primary-navigation .current-menu-item > a {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1.25fr;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.article-card {
+  background: #fff;
+  border: 1px solid #efdfca;
+  border-radius: var(--rounded);
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 24px 60px var(--shadow);
+}
+
+.article-card h1,
+.article-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+.post-meta {
+  color: #7a6757;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.entry-content {
+  color: #4d4036;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--forest);
+  color: #fff;
+  border-radius: 12px;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  transform: translateY(-1px);
+  background: #668763;
+}
+
+.sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--rounded);
+  border: 1px solid #efdfca;
+  box-shadow: 0 20px 50px var(--shadow);
+  height: fit-content;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 28px 0 34px;
+  color: #695742;
+  font-size: 14px;
+  background: #f6edde;
+  border-top: 1px solid #efdfca;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+.footer-brand {
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-tagline {
+  margin: 6px 0 0;
+  color: #7a6757;
+}
+
+.footer-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-navigation a {
+  color: #7a6757;
+  font-weight: 600;
+}
+
+.shop-navigation {
+  opacity: 0.8;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #efdfca;
+  border-radius: 12px;
+  color: var(--terracotta);
+  background: #fff;
+  font-weight: 600;
+}
+
+.pagination .current {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+
+/* WooCommerce tweaks */
+
+.woocommerce-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.1fr;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.shop-hero {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.9), rgba(241, 228, 212, 0.8));
+  border: 1px solid #efdfca;
+  border-radius: var(--rounded);
+  padding: 24px 26px;
+  margin-bottom: 18px;
+  box-shadow: 0 16px 40px var(--shadow);
+}
+
+.shop-hero h1 {
+  margin: 6px 0 8px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.shop-subtitle {
+  margin: 0;
+  color: #6f5a47;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7a6757;
+  background: rgba(214, 178, 138, 0.24);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.woocommerce ul.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.woocommerce ul.products li.product {
+  border: 1px solid #efdfca;
+  border-radius: var(--rounded);
+  padding: 14px;
+  box-shadow: 0 12px 30px var(--shadow);
+  overflow: hidden;
+  background: #fff;
+}
+
+.woocommerce ul.products li.product a img {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(64, 50, 41, 0.08);
+}
+
+.woocommerce ul.products li.product .button,
+.woocommerce a.button,
+.woocommerce button.button,
+.button,
+input[type='submit'] {
+  background: var(--forest);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.woocommerce ul.products li.product .button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.button:hover,
+input[type='submit']:hover {
+  background: #668763;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(123, 159, 123, 0.35);
+}
+
+.woocommerce div.product .product_title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce ul.products li.product .price {
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+.woocommerce nav.woocommerce-pagination ul {
+  border: none;
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+  border: none;
+  margin: 0 4px;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+  border-radius: 12px;
+  border: 1px solid #efdfca;
+  padding: 8px 12px;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+  color: #7a6757;
+}
+
+/* Responsiveness */
+
+@media (max-width: 980px) {
+  main,
+  .woocommerce-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-branding {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .primary-navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary-navigation.open {
+    display: flex;
+  }
+}
